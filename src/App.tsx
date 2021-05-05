@@ -33,7 +33,7 @@ export default function App() {
         {listState.items.length > 0 && (
           <div className="items">
             {listState.items.map((item, index) => (
-              <div className="item" key={item}>
+              <div className="item" key={index}>
                 {item}{" "}
                 <button
                   onClick={() => itemsDispatch(removeItemByIndexAction(index))}

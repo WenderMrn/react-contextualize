@@ -1,4 +1,4 @@
-import { action } from "..";
+import { action } from "../index";
 import { ActionTypes, AddItemActionType, removeItemActionType } from "./types";
 
 function AddItemAction(item: string): AddItemActionType {

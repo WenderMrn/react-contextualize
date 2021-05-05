@@ -1,4 +1,4 @@
-import { action } from "..";
+import { action } from "../index";
 import { ActionTypes, CountActionType, MinusActionType } from "./types";
 
 function AddCountAction(): CountActionType {
