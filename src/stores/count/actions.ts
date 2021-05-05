@@ -1,17 +1,12 @@
+import { action } from "..";
 import { ActionTypes, CountActionType, MinusActionType } from "./types";
 
 function AddCountAction(): CountActionType {
-  return {
-    type: ActionTypes.IncrementCount,
-    payload: undefined,
-  };
+  return action(ActionTypes.IncrementCount, undefined);
 }
 
 function MinusCountAction(): MinusActionType {
-  return {
-    type: ActionTypes.DecrementCount,
-    payload: undefined,
-  };
+  return action(ActionTypes.DecrementCount, undefined);
 }
 
 export { AddCountAction, MinusCountAction };

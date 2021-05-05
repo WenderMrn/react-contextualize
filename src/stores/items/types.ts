@@ -1,6 +1,6 @@
 import React from "react";
 
-import { ActionType } from "../types";
+import { ActionType } from "../index";
 
 export enum ActionTypes {
   AddItem = "AddItem",
