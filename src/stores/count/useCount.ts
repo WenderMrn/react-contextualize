@@ -2,7 +2,7 @@ import { useReducer } from "react";
 
 import reducer, { initialState } from "./reducer";
 
-export function useCountDispatch() {
+export function useCount() {
   const [countState, countDispatch] = useReducer(reducer, initialState);
 
   return {

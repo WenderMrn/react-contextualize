@@ -3,18 +3,12 @@ import React from "react";
 import { CountContextDispatch } from "./count/context";
 import { ItemsContextDispatch } from "./items/context";
 
-import { CountDispatch } from "./count/types";
-import { ItemsDispatch } from "./items/types";
+import { useCount } from "stores/count/useCount";
+import { useItems } from "stores/items/useItems";
 
-type Props = {
-  dispatchs: {
-    countDispatch: CountDispatch;
-    itemsDispatch: ItemsDispatch;
-  };
-};
-
-const CombinedContextProvider: React.FC<Props> = ({ children, dispatchs }) => {
-  const { countDispatch, itemsDispatch } = dispatchs;
+const CombinedContextProvider: React.FC = ({ children }) => {
+  const { countDispatch } = useCount();
+  const { itemsDispatch } = useItems();
 
   return (
     <CountContextDispatch.Provider value={countDispatch}>

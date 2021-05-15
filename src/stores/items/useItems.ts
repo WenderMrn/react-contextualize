@@ -2,11 +2,11 @@ import { useReducer } from "react";
 
 import reducer, { initialState } from "./reducer";
 
-export function useItemsDispatch() {
-  const [listState, itemsDispatch] = useReducer(reducer, initialState);
+export function useItems() {
+  const [itemsState, itemsDispatch] = useReducer(reducer, initialState);
 
   return {
-    listState,
+    itemsState,
     itemsDispatch,
   };
 }
