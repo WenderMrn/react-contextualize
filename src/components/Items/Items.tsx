@@ -5,7 +5,7 @@ import { AddItemAction, removeItemByIndexAction } from "stores/items/actions";
 
 function Items() {
   const [itemName, setItemName] = useState("");
-  const { listState, itemsDispatch } = useItems();
+  const { itemsState, itemsDispatch } = useItems();
 
   const handleAddItem = () => {
     if (!itemName) return;
@@ -17,9 +17,9 @@ function Items() {
     <>
       <h1>List Items</h1>
       <hr style={{ width: 500 }} />
-      {listState.items.length > 0 && (
+      {itemsState.items.length > 0 && (
         <div className="items">
-          {listState.items.map((item, index) => (
+          {itemsState.items.map((item, index) => (
             <div className="item" key={index}>
               {item}{" "}
               <button
